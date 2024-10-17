@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cars App</title>
+</head>
+<body>
+    <h1>Edit <%= car.name %></h1>
+    <form action="/cars/<%= car._id %>?_method=PUT" method="post">
+        <div>
+            <label for="name">Name:</label>
+            <input type="text" name="name" id="name" required value="<%= car.name %>">
+        </div>
+
+        <div>
+            <label for="description">Description:</label>
+            <input type="text" name="description" id="description" value="<%= car.description %>">
+        </div>
+
+        <button type="submit">Update Car</button>
+    </form>
+    <a href="/cars">Back to Cars</a>
+</body>
+</html>
